@@ -20,6 +20,23 @@ const UploadPage = () => {
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4">
       {/* Heading */}
       <h1 className="text-3xl md:text-4xl font-bold text-green-600 mb-4 text-center">Upload an Image of the Food Packet Label</h1>
+      {/* Upload Button */}
+      <div className="text-center py-4 mb-12">
+        <label
+          htmlFor="upload-input"
+          className="bg-green-600 text-white px-8 py-4 rounded-md hover:bg-green-700 cursor-pointer inline-flex items-center">
+          <FaUpload className="mr-2" size={24} />
+          Upload Ingredients Label
+        </label>
+        <input
+          id="upload-input"
+          type="file"
+          accept="image/*"
+          onChange={handleFileUpload}
+          className="hidden"
+        />
+      </div>
+
       <p className="text-lg text-gray-600 mb-10 text-center">
         Follow the steps below to upload the ingredients section of your food packet.
       </p>
@@ -78,23 +95,7 @@ const UploadPage = () => {
         </div>
       </div>
 
-      {/* Upload Button */}
-      <div className="text-center mb-12">
-        <label
-          htmlFor="upload-input"
-          className="bg-green-600 text-white px-8 py-4 rounded-md hover:bg-green-700 cursor-pointer inline-flex items-center">
-          <FaUpload className="mr-2" size={24} />
-          Upload Ingredients Label
-        </label>
-        <input
-          id="upload-input"
-          type="file"
-          accept="image/*"
-          onChange={handleFileUpload}
-          className="hidden"
-        />
-      </div>
-
+      
       {/* Results Section */}
       <div className="w-full max-w-lg bg-white p-6 rounded-lg shadow-lg mb-12">
         <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Classification Result</h2>

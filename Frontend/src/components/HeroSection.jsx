@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 const HeroSection = () => {
   return (
     <section className="bg-gray-100 py-20">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div className="container mx-auto px-5 flex flex-col md:flex-row items-center justify-between">
         {/* Left side - Slogan and Call to Action */}
         <div className="w-full md:w-1/2 text-left mb-10 md:mb-0">
           <h1 className="text-5xl font-bold text-green-600 mb-6">
